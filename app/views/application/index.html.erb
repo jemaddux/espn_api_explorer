@@ -1,0 +1,15 @@
+<% @espn.all.each do |es| %>
+
+  <%= link_to es.title, es.headline["links"]["web"]["href"] %><br>
+  <%= es.description %><br/>
+  <% if es.headline["images"][0] %>
+    <%= image_tag es.headline["images"][0]["url"] %><br/>
+  <% end %>
+  <%= es.headline["keywords"] %><br/>
+  <%= es.inspect %>
+  <br/>
+  <br/><br/><br/>
+  ..............................
+  <br/>
+
+<% end %>
